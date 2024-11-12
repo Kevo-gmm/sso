@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 10%;
+  --card: 0 0% 95%;
+  --card-foreground: 0 0% 10%;
+  --primary: 220 100% 15%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 225 100% 65%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 85%;
+  --muted-foreground: 0 0% 30%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  margin: auto;
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabs-container .nav-link {
+  color: hsl(var(--foreground));
+}
+
+.tabs-container .nav-link.active {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.social-btn {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border: 1px solid hsl(var(--muted));
+  transition: background-color 0.2s ease;
+}
+
+.social-btn:hover {
+  background-color: hsl(var(--muted));
+}
+
+.alert {
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 1rem;
 }
