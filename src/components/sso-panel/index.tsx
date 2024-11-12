@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { sendReq } from "../../utils";
-import Button from "../ui/btn";
 
 export const SSOPanel = () => {
   const [error, setError] = useState("");

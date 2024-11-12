@@ -45,7 +45,7 @@ export const Login = () => {
             </Link>
           </p>
           <div className="mb-3">
-            <a href="/reset-password" className="text-primary text-decoration-none">
+            <a href="/forgot-password" className="text-primary text-decoration-none">
               Forgot password?
             </a>
           </div>
