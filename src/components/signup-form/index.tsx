@@ -43,7 +43,7 @@ export const SignUpForm = () => {
 
       if (res.ok) {
         const url = window.localStorage.getItem("redirect_url");
-        if (url) window.location.href = `${url}?accessToken=${data.accessToken}`;
+        if (url) window.location.href = `${url}?route=${data.token}`;
         setFormData({ name: "", email: "", password: "", confirmPassword: "" });
       } else if (data.error) setError(data.error);
       else setError("Something went wrong. Please try again");

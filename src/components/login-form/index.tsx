@@ -30,7 +30,7 @@ export const LoginForm = () => {
       const { res, data } = await sendReq({ email: formData.email, password: formData.password }, "users/login");
       if (res.ok) {
         const url = window.localStorage.getItem("redirect_url");
-        if (url) window.location.href = `${url}?accessToken=${data.accessToken}`;
+        if (url) window.location.href = `${url}?route=${data.token}`;
         setFormData({ email: "", password: "" });
       } else if (data.error) setError(data.error);
       else setError("Something went wrong. Please try again");
