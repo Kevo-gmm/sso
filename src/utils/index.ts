@@ -1,4 +1,4 @@
-export const domain_url = "http://localhost:3001";
+export const domain_url = "https://srv.control.trade";
 
 export const sendReq = async (body: { [x: string]: string | boolean | number | undefined | string[] }, endpoint: string, method: string = "POST") => {
   const fullPath = window.location.href;
